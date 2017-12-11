@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Beef'd";
+    src: url("../fonts/Beef'd.ttf");
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    background: black;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.pong {
+    background: black;
+    position: relative;
+}
+
+.ball{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    margin-top: 60px;
+    -webkit-animation: play_ball 5s linear infinite;
+}
+
+.left_paddle{
+    float: left;
+    width: 25px;
+    height: 120px;
+    background: white;
+    -webkit-animation: left_pong 5s infinite;
+}
+
+.right_paddle{
+    float:right;
+    width:25px;
+    height:120px;
+    background:white;
+    -webkit-animation: right_pong 5s infinite;
+}
+
+@-webkit-keyframes left_pong {
+    0% {margin-top: 0px;}
+    15%{margin-top: -webkit-calc(100vh - 120px);}
+    100%{margin-top: 0px;}
+}
+
+@-webkit-keyframes right_pong {
+    0% {margin-top: -webkit-calc(100vh - 120px);}
+    50%{margin-top: 0px;}
+    100%{margin-top: -webkit-calc(100vh - 120px);}
+}
+
+@-webkit-keyframes play_ball{
+    0% {margin-top: 60px; margin-left: 0px;}
+    25%{margin-left: -webkit-calc(100vw - 80px); margin-top: -webkit-calc(100vh / 4);}
+    50%{margin-left: -webkit-calc(100vw / 2); margin-top: -webkit-calc(100vh - 30px);}
+    100%{margin-left:0px;}
+}
+
+.pong-info {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 180px;
+}
+
+.uncommon {
+    text-transform: uppercase;
+    font-size: 280%;
+    font-family: "Beef'd";
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 700px;
+}
+
+.date, .location {
+    display: block;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: 150%;
+}
+
+.date {
+    margin-top: 50px;
+}
+
+.location {
+    margin-top: 10px;
+}
+
+.logo {
+    margin-top: 70px;
+    height: 100px;
+}
+
+.register {
+    display: block;
+    text-transform: uppercase;
+    font-size: 130%;
+    color: black;
+    font-weight: 400;
+    background: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 50px auto 0;
+    width: 200px;
+    padding: 15px 0 17px;
+}
+
+
+.pacman {
+    background: #121949;
+}
+
+.snake {
+    background: #134633;
+}
+
+.invaders {
+    background: black;
+}
