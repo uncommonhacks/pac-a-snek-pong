@@ -70,35 +70,6 @@ html, body {
     100%{margin-left:0px;}
 }
 
-/* Pacman Animation */
-.pac-up {
-  background-color:yellow;
-  border-radius: 50px 50px 0 0;
-  height: 25px;
-  width: 50px;
-  -webkit-animation: eat-up 0.5s infinite;
-}
-
-.pac-down {
-  background-color: yellow;
-  border-radius: 0 0 50px 50px;
-  height: 25px;
-  width: 50px;
-  -webkit-animation: eat-down 0.5s infinite;
-}
-
-@-webkit-keyframes eat-up {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(-35deg);}
-}
-
-@-webkit-keyframes eat-down {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(35deg);}
-}
-
-
-
 .pong-info {
     position: absolute;
     text-align: center;
@@ -154,10 +125,161 @@ html, body {
 
 .pacman {
     background: #121949;
+    position: relative;
 }
+
+/* Pacman Animation */
+.pac-up {
+    background-color:yellow;
+    border-radius: 50px 50px 0 0;
+    height: 25px;
+    width: 50px;
+    -webkit-animation: eat-up 0.5s infinite;
+  }
+  
+  .pac-down {
+    background-color: yellow;
+    border-radius: 0 0 50px 50px;
+    height: 25px;
+    width: 50px;
+    -webkit-animation: eat-down 0.5s infinite;
+  }
+
+.pac {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.pac-person {
+    display: inline-block;
+    -webkit-animation: move-pac 10s linear infinite;
+}
+
+.pacfood {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+}
+
+.pac-food-1 {
+    top: 70px;
+    left: 150px;
+    -webkit-animation: food-dis-1 10s linear infinite;
+}
+
+.pac-food-2 {
+    top: 70px;
+    right: 150px;
+    -webkit-animation: food-dis-2 10s linear infinite;
+}
+
+.pac-food-3 {
+    bottom: 70px;
+    right: 150px;
+    -webkit-animation: food-dis-3 10s linear infinite;
+}
+
+.pac-food-4 {
+    bottom: 70px;
+    left: 150px;
+    -webkit-animation: food-dis-4 10s linear infinite;
+}
+
+@-webkit-keyframes food-dis-1 {
+    0% {opacity: 1;}
+    1% {opacity: 1;}
+    2% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes food-dis-2 {
+    0% {opacity: 1;}
+    23% {opacity: 1;}
+    24% {opacity: 0;}
+    95% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes food-dis-3 {
+    0% {opacity: 1;}
+    51% {opacity: 1;}
+    52% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes food-dis-4 {
+    0% {opacity: 1;}
+    73% {opacity: 1;}
+    74% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes move-pac {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(-webkit-calc(100vw - 150px));}
+    25.1% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(90deg);}
+    50% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(90deg);}
+    50.1% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
+    75% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
+    75.1% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(270deg);}
+    99.9% {transform: rotate(270deg);}
+    100% {transform: translateX(0px);}
+}
+  
+  @-webkit-keyframes eat-up {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-35deg);}
+  }
+  
+  @-webkit-keyframes eat-down {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(35deg);}
+  }
 
 .snake {
     background: #134633;
+}
+
+.snake-body {
+    height: 28px;
+    width: 28px;
+    background: white;
+    border: solid 1px black;
+    margin-top: 1px;
+}
+
+.snake-game {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#s8 {
+    -webkit-animation: move8 10s linear infinite;
+}
+
+#s7 {
+    -webkit-animation: move7 10s linear infinite;
+}
+
+@-webkit-keyframes move8 {
+    0% {transform: translateY(0px);}
+    25% {transform: translateY(50vh);}
+    50% {transform: translateX(90vw) translateY(50vh);}
+    75% {transform: translateX(90vw);}
+    100% {transform: translateX(0px);}
+}
+
+@-webkit-keyframes move7 {
+    0% {transform: translateY(0px);}
+    27.3% {transform: translateY(53.5vh);}
+    50% {transform: translateX(90vw) translateY(53.5vh);}
+    75% {transform: translateX(90vw);}
+    100% {transform: translateX(0px);}
 }
 
 .invaders {
