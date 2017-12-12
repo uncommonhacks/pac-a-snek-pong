@@ -23,6 +23,7 @@ html, body {
     position: relative;
 }
 
+/* Pong Animation */
 .ball{
     float: left;
     width: 30px;
@@ -68,6 +69,35 @@ html, body {
     50%{margin-left: -webkit-calc(100vw / 2); margin-top: -webkit-calc(100vh - 30px);}
     100%{margin-left:0px;}
 }
+
+/* Pacman Animation */
+.pac-up {
+  background-color:yellow;
+  border-radius: 50px 50px 0 0;
+  height: 25px;
+  width: 50px;
+  -webkit-animation: eat-up 0.5s infinite;
+}
+
+.pac-down {
+  background-color: yellow;
+  border-radius: 0 0 50px 50px;
+  height: 25px;
+  width: 50px;
+  -webkit-animation: eat-down 0.5s infinite;
+}
+
+@-webkit-keyframes eat-up {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-35deg);}
+}
+
+@-webkit-keyframes eat-down {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(35deg);}
+}
+
+
 
 .pong-info {
     position: absolute;
