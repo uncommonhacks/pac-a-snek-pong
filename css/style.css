@@ -30,7 +30,7 @@ html, body {
     background: white;
     border-radius: 50%;
     margin-top: 60px;
-    -webkit-animation: play_ball 5s linear infinite;
+    -webkit-animation: play_ball 3s linear infinite;
 }
 
 .left_paddle{
@@ -38,7 +38,7 @@ html, body {
     width: 25px;
     height: 120px;
     background: white;
-    -webkit-animation: left_pong 5s infinite;
+    -webkit-animation: left_pong 3s infinite;
 }
 
 .right_paddle{
@@ -46,12 +46,13 @@ html, body {
     width:25px;
     height:120px;
     background:white;
-    -webkit-animation: right_pong 5s infinite;
+    -webkit-animation: right_pong 3s infinite;
 }
 
 @-webkit-keyframes left_pong {
     0% {margin-top: 0px;}
-    15%{margin-top: -webkit-calc(100vh - 120px);}
+    25%{margin-top: -webkit-calc(100vh - 120px);}
+    80%{margin-top: -webkit-calc((100vh - 120px) / 2);}
     100%{margin-top: 0px;}
 }
 
