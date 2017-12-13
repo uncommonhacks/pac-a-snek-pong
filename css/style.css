@@ -136,7 +136,7 @@ html, body {
     width: 50px;
     -webkit-animation: eat-up 0.5s infinite;
   }
-  
+
   .pac-down {
     background-color: yellow;
     border-radius: 0 0 50px 50px;
@@ -221,7 +221,7 @@ html, body {
 
 @-webkit-keyframes move-pac {
     0% {transform: translateX(0px);}
-    25% {transform: translateX(-webkit-calc(100vw - 150px));}
+    25% {transform: translateX();}
     25.1% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(90deg);}
     50% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(90deg);}
     50.1% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
@@ -230,12 +230,12 @@ html, body {
     99.9% {transform: rotate(270deg);}
     100% {transform: translateX(0px);}
 }
-  
+
   @-webkit-keyframes eat-up {
     0% {transform: rotate(0deg);}
     50% {transform: rotate(-35deg);}
   }
-  
+
   @-webkit-keyframes eat-down {
     0% {transform: rotate(0deg);}
     50% {transform: rotate(35deg);}
@@ -282,6 +282,55 @@ html, body {
     100% {transform: translateX(0px);}
 }
 
+/* Invaders */
 .invaders {
     background: black;
+}
+
+.canon-outer {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.canon {
+  display: inline-block;
+  margin-top: -webkit-calc(100vh - 120px);
+  -webkit-animation: invader-move 10s linear infinite;
+}
+
+.top {
+  height: 5px;
+  width: 3px;
+  background-color: white;
+  position: relative;
+  left: 50px;
+}
+
+.mid {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  position: relative;
+  left: 45px;
+}
+
+.thin-mid {
+  height: 5px;
+  width: 90px;
+  background-color: white;
+  position: relative;
+  left: 5px;
+}
+
+.bottom {
+  height: 20px;
+  width: 100px;
+  background-color: white;
+}
+
+
+@-webkit-keyframes invader-move {
+  0% {transform: translateX(0px);}
+  50% {transform: translateX(-webkit-calc(100vw - 200px));}
+  100% {transform: translateX(0px);}
 }
