@@ -241,45 +241,125 @@ html, body {
     50% {transform: rotate(35deg);}
   }
 
+/* SNEK */
 .snake {
     background: #134633;
 }
 
 .snake-body {
-    height: 28px;
-    width: 28px;
+    height: 4vh;
+    width: 4vh;
     background: white;
-    border: solid 1px black;
-    margin-top: 1px;
+    box-sizing: border-box;
+    border: solid 0.1vh black;
 }
 
 .snake-game {
-    padding-left: 50px;
-    padding-top: 50px;
+    padding-left: 4vw;
+    padding-top: 4vh;
 }
 
-#s8 {
-    -webkit-animation: move8 10s linear infinite;
+#s1 {
+    -webkit-animation: move1 10s linear infinite;
+}
+
+#s2 {
+    -webkit-animation: move2 10s linear infinite;
+}
+
+#s3 {
+    -webkit-animation: move3 10s linear infinite;
+}
+
+#s4 {
+    -webkit-animation: move4 10s linear infinite;
+}
+
+#s5 {
+    -webkit-animation: move5 10s linear infinite;
+}
+
+#s6 {
+    -webkit-animation: move6 10s linear infinite;
 }
 
 #s7 {
     -webkit-animation: move7 10s linear infinite;
 }
 
-@-webkit-keyframes move8 {
+#s8 {
+    -webkit-animation: move8 10s linear infinite;
+}
+
+@-webkit-keyframes move1 {
     0% {transform: translateY(0px);}
-    25% {transform: translateY(50vh);}
-    50% {transform: translateX(90vw) translateY(50vh);}
-    75% {transform: translateX(90vw);}
-    100% {transform: translateX(0px);}
+    25% {transform: translateY(88vh);}
+    50% {transform: translateY(88vh) translateX(88vw);}
+    75% {transform: translateX(88vw);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move2 {
+    0% {transform: translateY(0px);}
+    23.86% {transform: translateY(84vh);}
+    48.86% {transform: translateY(84vh) translateX(88vw);}
+    73.86% {transform: translateY(-4vh) translateX(88vw);}
+    98.86% {transform: translateY(-4vh);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move3 {
+    0% {transform: translateY(0px);}
+    22.73% {transform: translateY(80vh);}
+    47.73% {transform: translateY(80vh) translateX(88vw);}
+    72.73% {transform: translateY(-8vh) translateX(88vw);}
+    97.73% {transform: translateY(-8vh);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move4 {
+    0% {transform: translateY(0px);}
+    21.59% {transform: translateY(76vh);}
+    46.59% {transform: translateY(76vh) translateX(88vw);}
+    71.59% {transform: translateY(-12vh) translateX(88vw);}
+    96.59% {transform: translateY(-12vh);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move5 {
+    0% {transform: translateY(0px);}
+    20.45% {transform: translateY(72vh);}
+    45.45% {transform: translateY(72vh) translateX(88vw);}
+    70.45% {transform: translateY(-16vh) translateX(88vw);}
+    95.45% {transform: translateY(-16vh);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move6 {
+    0% {transform: translateY(0px);}
+    19.32% {transform: translateY(68vh);}
+    44.32% {transform: translateY(68vh) translateX(88vw);}
+    69.32% {transform: translateY(-20vh) translateX(88vw);}
+    94.32% {transform: translateY(-20vh);}
+    100% {transform: translateY(0px);}
 }
 
 @-webkit-keyframes move7 {
     0% {transform: translateY(0px);}
-    27.3% {transform: translateY(53.5vh);}
-    50% {transform: translateX(90vw) translateY(53.5vh);}
-    75% {transform: translateX(90vw);}
-    100% {transform: translateX(0px);}
+    18.18% {transform: translateY(64vh);}
+    43.18% {transform: translateY(64vh) translateX(88vw);}
+    68.18% {transform: translateY(-24vh) translateX(88vw);}
+    93.18% {transform: translateY(-24vh);}
+    100% {transform: translateY(0px);}
+}
+
+@-webkit-keyframes move8 {
+    0% {transform: translateY(0px);}
+    17.04% {transform: translateY(60vh);}
+    42.04% {transform: translateY(60vh) translateX(88vw);}
+    67.04% {transform: translateY(-28vh) translateX(88vw);}
+    92.04% {transform: translateY(-28vh);}
+    100% {transform: translateY(0px);}
 }
 
 /* Invaders */
