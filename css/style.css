@@ -248,7 +248,7 @@ html, body {
 
 .snake-body {
     height: 4vh;
-    width: 4vh;
+    width: 4vw;
     background: white;
     box-sizing: border-box;
     border: solid 0.1vh black;
