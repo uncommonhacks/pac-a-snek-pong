@@ -199,7 +199,7 @@ html, body {
 
 .pac-food-1 {
     top: 70px;
-    left: 65px;
+    left: 70px;
 
     -webkit-animation: food-dis-1 10s linear infinite;
     animation: food-dis-1 10s linear infinite;
@@ -207,7 +207,7 @@ html, body {
 
 .pac-food-2 {
     top: 70px;
-    right: 65px;
+    right: 70px;
 
     -webkit-animation: food-dis-2 10s linear infinite;
     animation: food-dis-2 10s linear infinite;
@@ -216,7 +216,7 @@ html, body {
 .pac-food-3 {
     top: -webkit-calc(100vh - 80px);
     top: calc(100vh - 80px);
-    right: 65px;
+    right: 70px;
 
     -webkit-animation: food-dis-3 10s linear infinite;
     animation: food-dis-3 10s linear infinite;
@@ -225,7 +225,7 @@ html, body {
 .pac-food-4 {
     top: -webkit-calc(100vh - 80px);
     top: calc(100vh - 80px);
-    left: 65px;
+    left: 70px;
 
     -webkit-animation: food-dis-4 10s linear infinite;
     animation: food-dis-4 10s linear infinite;
@@ -311,7 +311,7 @@ html, body {
     width: 100%;
     display: block;
     padding-top: 115px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
 }
 
 .faq-title {
@@ -322,7 +322,7 @@ html, body {
     display: block;
     text-align: center;
     width: 700px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 .question {
@@ -334,7 +334,7 @@ html, body {
     padding-bottom: 10px;
     width: 75%;
     margin: 0 auto;
-    border-bottom: solid 1px yellow;
+    border-bottom: dashed 1px white;
     color: yellow;
 }
 
@@ -344,14 +344,14 @@ html, body {
     text-align: left;
     font-size: 23px;
     font-weight: 200;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     padding-top: 9px;
     width: 75%;
     margin: 0 auto;
 }
 
 /* SNEK */
-.snake {
+/* .snake {
     background: #134633;
 }
 
@@ -477,10 +477,13 @@ html, body {
     67.04% {transform: translateY(-28vh) translateX(88vw);}
     92.04% {transform: translateY(-28vh);}
     100% {transform: translateY(0px);}
+} */
+
+.snake {
+    padding-bottom: 80px;
 }
 
 .snake-info {
-    position: absolute;
     text-align: center;
     width: 100%;
     display: block;
@@ -491,11 +494,70 @@ html, body {
     text-transform: uppercase;
     font-size: 280%;
     font-family: "Beef'd";
-    margin: 0 auto;
+    margin: 0px auto 0;
     display: block;
     text-align: center;
     width: 700px;
+    padding-bottom: 80px;
 }
+
+.time {
+    font-family: monospace;
+    color: #00FF00;
+    display: block;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.time-info {
+    font-family: monospace;
+    color: #00FF00;
+    display: block;
+    text-align: left;
+    font-size: 23px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.special {
+    padding-bottom: 50px;
+}
+
+.fire {
+    padding-bottom: 6px;
+}
+
+.type {
+    border: none;
+    background: none;
+    width: 85%;
+    font-family: monospace;
+    color: #00FF00;
+    display: block;
+    text-align: left;
+    font-size: 23px;
+    margin: 0 auto;
+    border-bottom: solid 1px #00FF00;
+    padding-bottom: 5px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #00FF00;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #00FF00;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #00FF00;
+}
+
+input:focus {outline:0;}
 
 /* Invaders */
 .invaders {
