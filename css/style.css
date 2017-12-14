@@ -178,11 +178,14 @@ html, body {
   }
 
 .pac {
-    padding-left: 50px;
-    padding-top: 50px;
+    height: 100%;
+    position: relative;
 }
 
 .pac-person {
+    position: absolute;
+    top: 50px;
+    left: 50px;
     display: inline-block;
 
     -webkit-animation: move-pac 10s linear infinite;
@@ -215,7 +218,7 @@ html, body {
 
 .pac-food-3 {
     top: -webkit-calc(100vh - 80px);
-    top: calc(100vh - 80px);
+    top: calc(100% - 80px);
     right: 70px;
 
     -webkit-animation: food-dis-3 10s linear infinite;
@@ -224,7 +227,7 @@ html, body {
 
 .pac-food-4 {
     top: -webkit-calc(100vh - 80px);
-    top: calc(100vh - 80px);
+    top: calc(100% - 80px);
     left: 70px;
 
     -webkit-animation: food-dis-4 10s linear infinite;
@@ -241,52 +244,54 @@ html, body {
 
 @-webkit-keyframes food-dis-2 {
     0% {opacity: 1;}
-    25% {opacity: 1;}
-    26% {opacity: 0;}
+    24.6% {opacity: 1;}
+    25.6% {opacity: 0;}
     95% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 @-webkit-keyframes food-dis-3 {
     0% {opacity: 1;}
-    49% {opacity: 1;}
-    50% {opacity: 0;}
+    48.7% {opacity: 1;}
+    49.7% {opacity: 0;}
     95% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 @-webkit-keyframes food-dis-4 {
     0% {opacity: 1;}
-    75% {opacity: 1;}
-    76% {opacity: 0;}
+    74% {opacity: 1;}
+    75% {opacity: 0;}
     95% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 @-webkit-keyframes move-pac {
-    0% {transform: translateX(0px);}
+    0% {left: 50px;}
 
-    25% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(0deg);}
-    25% {transform: translateX(calc(100vw - 150px)) rotate(0deg);}
+    25% {left: -webkit-calc(100% - 100px); top: 50px; -webkit-transform: rotate(0deg);}
+    25% {left: calc(100% - 100px); top: 50px; transform: rotate(0deg);}
 
-    25.1% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(90deg);}
-    25.1% {transform: translateX(calc(100vw - 150px)) rotate(90deg);}
+    25.1% {left: -webkit-calc(100% - 100px); top: 50px; -webkit-transform: rotate(90deg);}
+    25.1% {left: calc(100% - 100px); top: 50px; transform: rotate(90deg);}
 
-    50% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(90deg);}
-    50% {transform: translateX(calc(100vw - 150px)) translateY(calc(100vh - 150px)) rotate(90deg); opacity: 1;}
+    50% {left: -webkit-calc(100% - 100px); top: -webkit-calc(100% - 100px); -webkit-transform: rotate(90deg);} 
+    50% {left: calc(100% - 100px); top: calc(100% - 100px); transform: rotate(90deg);}
 
-    50.1% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
-    50.1% {transform: translateX(calc(100vw - 150px)) translateY(calc(100vh - 150px)) rotate(180deg); opacity: 0.2;}
+    50.1% {left: -webkit-calc(100% - 100px); top: -webkit-calc(100% - 100px); -webkit-transform: rotate(180deg);} 
+    50.1% {left: calc(100% - 100px); top: calc(100% - 100px); transform: rotate(180deg);}
 
-    75% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(180deg); opacity: 0.2;}
-    75% {transform: translateY(calc(100vh - 150px)) rotate(180deg); opacity: 0.2;}
+    75% {left: 50px; top: -webkit-calc(100% - 100px); -webkit-transform: rotate(180deg);} 
+    75% {left: 50px; top: calc(100% - 100px); transform: rotate(180deg);}
 
-    75.1% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(270deg); opacity: 1;}
-    75.1% {transform: translateY(calc(100vh - 150px)) rotate(270deg); opacity: 1;}
+    75.1% {left: 50px; top: -webkit-calc(100% - 100px); -webkit-transform: rotate(270deg);} 
+    75.1% {left: 50px; top: calc(100% - 100px); transform: rotate(270deg);}
 
     99.9% {transform: rotate(270deg);}
-    100% {transform: translateX(0px);}
+    100% {left: 50px}
+
 }
+
 
   @-webkit-keyframes eat-up {
     0% {transform: rotate(0deg);}
@@ -299,6 +304,7 @@ html, body {
   }
 
 .pac-game {
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -311,7 +317,7 @@ html, body {
     width: 100%;
     display: block;
     padding-top: 115px;
-    padding-bottom: 80px;
+    padding-bottom: 115px;
 }
 
 .faq-title {
@@ -735,4 +741,5 @@ input:focus {outline:0;}
     margin-right: 30px;
     margin-top: 30px;
     box-shadow: -10px -10px 0px 1px #00ff00;
+    opacity: 0.9;
 }
