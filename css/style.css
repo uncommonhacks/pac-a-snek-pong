@@ -31,7 +31,9 @@ html, body {
     background: white;
     border-radius: 50%;
     margin-top: 60px;
+
     -webkit-animation: play_ball 3s linear infinite;
+    animation: play_ball 3s linear infinite;
 }
 
 .left_paddle{
@@ -39,7 +41,9 @@ html, body {
     width: 25px;
     height: 120px;
     background: white;
+
     -webkit-animation: left_pong 3s infinite;
+    animation: left_pong 3s infinite;
 }
 
 .right_paddle{
@@ -47,26 +51,42 @@ html, body {
     width:25px;
     height:120px;
     background:white;
+
     -webkit-animation: right_pong 3s infinite;
+    animation: right_pong 3s infinite;
 }
 
 @-webkit-keyframes left_pong {
     0% {margin-top: 0px;}
+
     25%{margin-top: -webkit-calc(100vh - 120px);}
+    25%{margin-top: calc(100vh - 120px);}
+
     80%{margin-top: -webkit-calc((100vh - 120px) / 2);}
+    80%{margin-top: calc((100vh - 120px) / 2);}
+
     100%{margin-top: 0px;}
 }
 
 @-webkit-keyframes right_pong {
     0% {margin-top: -webkit-calc(100vh - 120px);}
+    0% {margin-top: calc(100vh - 120px);}
+
     50%{margin-top: 0px;}
+
     100%{margin-top: -webkit-calc(100vh - 120px);}
+    100%{margin-top: calc(100vh - 120px);}
 }
 
 @-webkit-keyframes play_ball{
     0% {margin-top: 60px; margin-left: 0px;}
+
     25%{margin-left: -webkit-calc(100vw - 80px); margin-top: -webkit-calc(100vh / 4);}
+    25%{margin-left: calc(100vw - 80px); margin-top: calc(100vh / 4);}
+
     50%{margin-left: -webkit-calc(100vw / 2); margin-top: -webkit-calc(100vh - 30px);}
+    50%{margin-left: calc(100vw / 2); margin-top: calc(100vh - 30px);}
+
     100%{margin-left:0px;}
 }
 
@@ -134,7 +154,9 @@ html, body {
     border-radius: 50px 50px 0 0;
     height: 25px;
     width: 50px;
+
     -webkit-animation: eat-up 0.5s infinite;
+    animation: eat-up 0.5s infinite;
   }
 
   .pac-down {
@@ -142,7 +164,9 @@ html, body {
     border-radius: 0 0 50px 50px;
     height: 25px;
     width: 50px;
+
     -webkit-animation: eat-down 0.5s infinite;
+    animation: eat-down 0.5s infinite;
   }
 
 .pac {
@@ -152,7 +176,9 @@ html, body {
 
 .pac-person {
     display: inline-block;
+
     -webkit-animation: move-pac 10s linear infinite;
+    animation: move-pac 10s linear infinite;
 }
 
 .pacfood {
@@ -166,25 +192,33 @@ html, body {
 .pac-food-1 {
     top: 70px;
     left: 150px;
+
     -webkit-animation: food-dis-1 10s linear infinite;
+    animation: food-dis-1 10s linear infinite;
 }
 
 .pac-food-2 {
     top: 70px;
     right: 150px;
+
     -webkit-animation: food-dis-2 10s linear infinite;
+    animation: food-dis-2 10s linear infinite;
 }
 
 .pac-food-3 {
     bottom: 70px;
     right: 150px;
+
     -webkit-animation: food-dis-3 10s linear infinite;
+    animation: food-dis-3 10s linear infinite;
 }
 
 .pac-food-4 {
     bottom: 70px;
     left: 150px;
+
     -webkit-animation: food-dis-4 10s linear infinite;
+    animation: food-dis-4 10s linear infinite;
 }
 
 @-webkit-keyframes food-dis-1 {
@@ -221,12 +255,25 @@ html, body {
 
 @-webkit-keyframes move-pac {
     0% {transform: translateX(0px);}
+
     25% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(0deg);}
+    25% {transform: translateX(calc(100vw - 150px)) rotate(0deg);}
+
     25.1% {transform: translateX(-webkit-calc(100vw - 150px)) rotate(90deg);}
+    25.1% {transform: translateX(calc(100vw - 150px)) rotate(90deg);}
+
     50% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(90deg);}
+    50% {transform: translateX(calc(100vw - 150px)) translateY(calc(100vh - 150px)) rotate(90deg);}
+
     50.1% {transform: translateX(-webkit-calc(100vw - 150px)) translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
+    50.1% {transform: translateX(calc(100vw - 150px)) translateY(calc(100vh - 150px)) rotate(180deg);}
+
     75% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(180deg);}
+    75% {transform: translateY(calc(100vh - 150px)) rotate(180deg);}
+
     75.1% {transform: translateY(-webkit-calc(100vh - 150px)) rotate(270deg);}
+    75.1% {transform: translateY(calc(100vh - 150px)) rotate(270deg);}
+
     99.9% {transform: rotate(270deg);}
     100% {transform: translateX(0px);}
 }
@@ -261,34 +308,42 @@ html, body {
 
 #s1 {
     -webkit-animation: move1 10s linear infinite;
+    animation: move1 10s linear infinite;
 }
 
 #s2 {
     -webkit-animation: move2 10s linear infinite;
+    animation: move2 10s linear infinite;
 }
 
 #s3 {
     -webkit-animation: move3 10s linear infinite;
+    animation: move3 10s linear infinite;
 }
 
 #s4 {
     -webkit-animation: move4 10s linear infinite;
+    animation: move4 10s linear infinite;
 }
 
 #s5 {
     -webkit-animation: move5 10s linear infinite;
+    animation: move5 10s linear infinite;
 }
 
 #s6 {
     -webkit-animation: move6 10s linear infinite;
+    animation: move6 10s linear infinite;
 }
 
 #s7 {
     -webkit-animation: move7 10s linear infinite;
+    animation: move7 10s linear infinite;
 }
 
 #s8 {
     -webkit-animation: move8 10s linear infinite;
+    animation: move8 10s linear infinite;
 }
 
 @-webkit-keyframes move1 {
@@ -368,46 +423,51 @@ html, body {
 }
 
 .canon-outer {
-  position: relative;
+    position: relative;
 }
 
 .canon {
     padding-left: 50px;
     padding-top: 50px;
-  display: inline-block;
-  margin-top: -webkit-calc(100vh - 120px);
-  -webkit-animation: invader-move 10s linear infinite;
-  position: relative;
+    display: inline-block;
+
+    margin-top: -webkit-calc(100vh - 120px);
+    margin-top: calc(100vh - 120px);
+
+    -webkit-animation: invader-move 10s linear infinite;
+    animation: invader-move 10s linear infinite;
+
+    position: relative;
 }
 
 .top {
-  height: 5px;
-  width: 3px;
-  background-color: white;
-  position: relative;
-  left: 50px;
+    height: 5px;
+    width: 3px;
+    background-color: white;
+    position: relative;
+    left: 50px;
 }
 
 .mid {
-  height: 12px;
-  width: 12px;
-  background-color: white;
-  position: relative;
-  left: 45px;
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    position: relative;
+    left: 45px;
 }
 
 .thin-mid {
-  height: 5px;
-  width: 90px;
-  background-color: white;
-  position: relative;
-  left: 5px;
+    height: 5px;
+    width: 90px;
+    background-color: white;
+    position: relative;
+    left: 5px;
 }
 
 .bottom {
-  height: 20px;
-  width: 100px;
-  background-color: white;
+    height: 20px;
+    width: 100px;
+    background-color: white;
 }
 
 .bullet {
@@ -417,56 +477,92 @@ html, body {
     position: relative;
     left: 65%;
     opacity: 0;
+
     -webkit-animation: invader-shoot 10s linear infinite;
+    animation: invader-shoot 10s linear infinite;
+
     position: absolute;
 }
 
 @-webkit-keyframes invader-move {
     0% {transform: translateX(0px);}
+
     50% {transform: translateX(-webkit-calc(100vw - 200px));}
+    50% {transform: translateX(calc(100vw - 200px));}
+
     100% {transform: translateX(0px);}
 }
 
 @-webkit-keyframes invader-shoot {
     4.99% {opacity: 0;}
     5% {opacity: 1; transform: translateY(0px);}
+
     10% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    10% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     10.01% {opacity: 0;}
     14.99% {opacity: 0;}
     15% {opacity: 1; transform: translateY(0px);}
+
     20% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    20% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     20.01% {opacity: 0;}
     24.99% {opacity: 0;}
     25% {opacity: 1; transform: translateY(0px);}
+
     30% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    30% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     30.01% {opacity: 0;}
     34.99% {opacity: 0;}
     35% {opacity: 1; transform: translateY(0px);}
+
     40% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    40% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     40.01% {opacity: 0;}
     44.99% {opacity: 0;}
     45% {opacity: 1; transform: translateY(0px);}
+
     50% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    50% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     50.01% {opacity: 0;}
     54.99% {opacity: 0;}
     55% {opacity: 1; transform: translateY(0px);}
+
     60% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    60% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     60.01% {opacity: 0;}
     64.99% {opacity: 0;}
     65% {opacity: 1; transform: translateY(0px);}
+
     70% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    70% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     70.01% {opacity: 0;}
     74.99% {opacity: 0;}
     75% {opacity: 1; transform: translateY(0px);}
+
     80% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    80% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     80.01% {opacity: 0;}
     81.99% {opacity: 0;}
     82% {opacity: 1; transform: translateY(0px);}
+
     87% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    87% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     87.01% {opacity: 0;}
     89.99% {opacity: 0;}
     90% {opacity: 1; transform: translateY(0px);}
+
     95% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
+    95% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+
     95.01% {opacity: 0;}
 }
 
