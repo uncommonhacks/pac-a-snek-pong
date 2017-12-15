@@ -16,6 +16,7 @@ html, body {
 }
 
 .section {
+    position: relative;
     min-height: 100vh;
 }
 
@@ -26,21 +27,22 @@ html, body {
 
 /* Pong Animation */
 .ball{
-    float: left;
+    position: absolute;
+    top: 60px;
+    left: 0px;
     width: 30px;
     height: 30px;
     background: white;
     border-radius: 50%;
-    margin-top: 60px;
-
     -webkit-animation: play_ball 3s linear infinite;
     animation: play_ball 3s linear infinite;
 }
 
 .left_paddle{
-    float: left;
+    position: absolute;
     width: 25px;
     height: 120px;
+    top: 0px;
     background: white;
 
     -webkit-animation: left_pong 3s infinite;
@@ -48,7 +50,9 @@ html, body {
 }
 
 .right_paddle{
-    float:right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
     width:25px;
     height:120px;
     background:white;
@@ -58,37 +62,37 @@ html, body {
 }
 
 @-webkit-keyframes left_pong {
-    0% {margin-top: 0px;}
+    0% {top: 0px;}
 
-    25%{margin-top: -webkit-calc(100% - 120px);}
-    25%{margin-top: calc(100vh - 120px);}
+    25%{top: -webkit-calc(100% - 120px);}
+    25%{top: calc(100% - 120px);}
 
-    80%{margin-top: -webkit-calc((100vh - 120px) / 2);}
-    80%{margin-top: calc((100vh - 120px) / 2);}
+    80%{top: -webkit-calc((100% - 120px) / 2);}
+    80%{top: calc((100% - 120px) / 2);}
 
-    100%{margin-top: 0px;}
+    100%{top: 0px;}
 }
 
 @-webkit-keyframes right_pong {
-    0% {margin-top: -webkit-calc(100vh - 120px);}
-    0% {margin-top: calc(100vh - 120px);}
+    0% {top: -webkit-calc(100% - 120px);}
+    0% {top: calc(100% - 120px);}
 
-    50%{margin-top: 0px;}
+    50%{top: 0px;}
 
-    100%{margin-top: -webkit-calc(100vh - 120px);}
-    100%{margin-top: calc(100vh - 120px);}
+    100%{top: -webkit-calc(100% - 120px);}
+    100%{top: calc(100% - 120px);}
 }
 
 @-webkit-keyframes play_ball{
-    0% {margin-top: 60px; margin-left: 0px;}
+    0% {top: 60px; left: 25px;}
 
-    25%{margin-left: -webkit-calc(100vw - 80px); margin-top: -webkit-calc(100vh / 4);}
-    25%{margin-left: calc(100vw - 80px); margin-top: calc(100vh / 4);}
+    25%{left: -webkit-calc(100% - 55px); top: -webkit-calc(100% / 4);}
+    25%{left: calc(100% - 55px); top: calc(100% / 4);}
 
-    50%{margin-left: -webkit-calc(100vw / 2); margin-top: -webkit-calc(100vh - 30px);}
-    50%{margin-left: calc(100vw / 2); margin-top: calc(100vh - 30px);}
+    50%{left: -webkit-calc(100% / 2); top: -webkit-calc(100% - 30px);}
+    50%{left: calc(100% / 2); top: calc(100% - 30px);}
 
-    100%{margin-left:0px;}
+    100%{left: 25px;}
 }
 
 .pong-game {
@@ -486,7 +490,10 @@ html, body {
 } */
 
 .snake {
+    background: black;
     padding-bottom: 80px;
+    position: relative;
+    z-index: 10;
 }
 
 .snake-info {
@@ -567,25 +574,24 @@ input:focus {outline:0;}
 
 /* Invaders */
 .invaders {
-    background: black;
+    background: gray;
+    position: relative;
+    height: auto;
+    z-index: 5 !important;
 }
 
 .canon-outer {
     position: relative;
+    height: 100%;
 }
 
 .canon {
-    padding-left: 50px;
-    padding-top: 50px;
+    position: absolute;
+    bottom: 0px;
     display: inline-block;
-
-    margin-top: -webkit-calc(100vh - 120px);
-    margin-top: calc(100vh - 120px);
 
     -webkit-animation: invader-move 10s linear infinite;
     animation: invader-move 10s linear infinite;
-
-    position: relative;
 }
 
 .top {
@@ -622,14 +628,13 @@ input:focus {outline:0;}
     width: 3px;
     height: 40px;
     background: white;
-    position: relative;
-    left: 65%;
+    left: 50%;
     opacity: 0;
-
+    z-index: 3;
     -webkit-animation: invader-shoot 10s linear infinite;
     animation: invader-shoot 10s linear infinite;
 
-    position: absolute;
+    position: relative;
 }
 
 @-webkit-keyframes invader-move {
@@ -645,81 +650,79 @@ input:focus {outline:0;}
     4.99% {opacity: 0;}
     5% {opacity: 1; transform: translateY(0px);}
 
-    10% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    10% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    10% {transform: translateY(-1500px); opacity: 1;}
 
     10.01% {opacity: 0;}
     14.99% {opacity: 0;}
     15% {opacity: 1; transform: translateY(0px);}
 
-    20% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    20% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    20% {transform: translateY(-1500px); opacity: 1;}
 
     20.01% {opacity: 0;}
     24.99% {opacity: 0;}
     25% {opacity: 1; transform: translateY(0px);}
 
-    30% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    30% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    30% {transform: translateY(-1500px); opacity: 1;}
 
     30.01% {opacity: 0;}
     34.99% {opacity: 0;}
     35% {opacity: 1; transform: translateY(0px);}
 
-    40% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    40% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    40% {transform: translateY(-1500px); opacity: 1;}
 
     40.01% {opacity: 0;}
     44.99% {opacity: 0;}
     45% {opacity: 1; transform: translateY(0px);}
 
-    50% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    50% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    50% {transform: translateY(-1500px); opacity: 1;}
 
     50.01% {opacity: 0;}
     54.99% {opacity: 0;}
     55% {opacity: 1; transform: translateY(0px);}
 
-    60% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    60% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    60% {transform: translateY(-1500px); opacity: 1;}
 
     60.01% {opacity: 0;}
     64.99% {opacity: 0;}
     65% {opacity: 1; transform: translateY(0px);}
 
-    70% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    70% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    70% {transform: translateY(-1500px); opacity: 1;}
 
     70.01% {opacity: 0;}
     74.99% {opacity: 0;}
     75% {opacity: 1; transform: translateY(0px);}
 
-    80% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    80% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    80% {transform: translateY(-1500px); opacity: 1;}
 
     80.01% {opacity: 0;}
     81.99% {opacity: 0;}
     82% {opacity: 1; transform: translateY(0px);}
 
-    87% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    87% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    87% {transform: translateY(-1500px); opacity: 1;}
 
     87.01% {opacity: 0;}
     89.99% {opacity: 0;}
     90% {opacity: 1; transform: translateY(0px);}
 
-    95% {transform: translateY(-webkit-calc((100vh - 70px) * -1)); opacity: 1;}
-    95% {transform: translateY(calc((100vh - 70px) * -1)); opacity: 1;}
+    95% {transform: translateY(-1500px); opacity: 1;}
 
     95.01% {opacity: 0;}
 }
 
+.invaders-game {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+}
+
 .invaders-info {
-    position: absolute;
     text-align: center;
     width: 100%;
     display: block;
-    margin-top: 100px;
+    padding-top: 115px;
+    padding-bottom: 140px;
 }
 
 .sponsors-title {
