@@ -34,8 +34,8 @@ html, body {
     height: 30px;
     background: white;
     border-radius: 50%;
-    -webkit-animation: play_ball 3s linear infinite;
-    animation: play_ball 3s linear infinite;
+    -webkit-animation: play_ball 6s linear infinite;
+    animation: play_ball 6s linear infinite;
 }
 
 .left_paddle{
@@ -45,8 +45,8 @@ html, body {
     top: 0px;
     background: white;
 
-    -webkit-animation: left_pong 3s infinite;
-    animation: left_pong 3s infinite;
+    -webkit-animation: left_pong 6s infinite;
+    animation: left_pong 6s infinite;
 }
 
 .right_paddle{
@@ -57,8 +57,8 @@ html, body {
     height:120px;
     background:white;
 
-    -webkit-animation: right_pong 3s infinite;
-    animation: right_pong 3s infinite;
+    -webkit-animation: right_pong 6s infinite;
+    animation: right_pong 6s infinite;
 }
 
 @-webkit-keyframes left_pong {
@@ -103,11 +103,17 @@ html, body {
     bottom: 0;
 }
 
+.pong-info-wrapper {
+    padding-bottom: 80px;
+}
+
 .pong-info {
     text-align: center;
     width: 100%;
     display: block;
     padding-top: 180px;
+    position: relative;
+    z-index: 2;
 }
 
 .uncommon {
@@ -339,10 +345,10 @@ html, body {
     font-family: 'Montserrat';
     display: block;
     text-align: left;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 700;
     padding-bottom: 10px;
-    width: 75%;
+    width: 67%;
     margin: 0 auto;
     border-bottom: dashed 1px white;
     color: yellow;
@@ -352,11 +358,11 @@ html, body {
     font-family: 'Montserrat';
     display: block;
     text-align: left;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 200;
     padding-bottom: 30px;
     padding-top: 9px;
-    width: 75%;
+    width: 67%;
     margin: 0 auto;
 }
 
@@ -519,10 +525,10 @@ html, body {
     color: #00FF00;
     display: block;
     text-align: left;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
     padding-bottom: 15px;
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -531,10 +537,10 @@ html, body {
     color: #00FF00;
     display: block;
     text-align: left;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 300;
     padding-bottom: 10px;
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -549,7 +555,7 @@ html, body {
 .type {
     border: none;
     background: none;
-    width: 85%;
+    width: 80%;
     font-family: monospace;
     color: #00FF00;
     display: block;
@@ -574,7 +580,7 @@ input:focus {outline:0;}
 
 /* Invaders */
 .invaders {
-    background: gray;
+    background: black;
     position: relative;
     height: auto;
     z-index: 5 !important;
@@ -588,10 +594,11 @@ input:focus {outline:0;}
 .canon {
     position: absolute;
     bottom: 0px;
+    left: 100px;
     display: inline-block;
 
-    -webkit-animation: invader-move 17s linear infinite;
-    animation: invader-move 17s linear infinite;
+    -webkit-animation: invader-move 25s linear infinite;
+    animation: invader-move 25s linear infinite;
 }
 
 .top {
@@ -631,8 +638,8 @@ input:focus {outline:0;}
     left: 50%;
     opacity: 0;
 
-    -webkit-animation: invader-shoot 17s linear infinite;
-    animation: invader-shoot 17s linear infinite;
+    -webkit-animation: invader-shoot 25s linear infinite;
+    animation: invader-shoot 25s linear infinite;
 
     position: relative;
     z-index: 3;
@@ -641,8 +648,8 @@ input:focus {outline:0;}
 @-webkit-keyframes invader-move {
     0% {transform: translateX(0px);}
 
-    50% {transform: translateX(-webkit-calc(100vw - 200px));}
-    50% {transform: translateX(calc(100vw - 200px));}
+    50% {transform: translateX(-webkit-calc(100vw - 300px));}
+    50% {transform: translateX(calc(100vw - 300px));}
 
     100% {transform: translateX(0px);}
 }
@@ -745,7 +752,322 @@ input:focus {outline:0;}
     margin-right: 30px;
     margin-top: 30px;
     box-shadow: -10px -10px 0px 1px #00ff00;
-    opacity: 0.9;
+    opacity: 1;
     position: relative;
     z-index: 10;
+}
+
+@media (max-height: 778px) {
+    .pong-info {
+        padding-top: 130px;
+    }
+}
+
+@media (max-height: 731px) {
+    .pong-info {
+        padding-top: 100px;
+    }
+}
+
+
+@media (max-height: 693px) {
+    .pong-info {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 751px) {
+    .uncommon {
+        font-size: 240%;
+        width: 500px;
+        padding-top: 40px;
+    }
+    .faq-title, .schedule-title, .sponsors-title {
+        font-size: 240%;
+        width: 500px;
+    }
+}
+
+@media (max-width: 569px) {
+    .pong-info {
+        padding-top: 70px;
+    }
+    .uncommon {
+        font-size: 200%;
+        width: 100%;
+    }
+    .faq-title, .schedule-title, .sponsors-title {
+        font-size: 200%;
+        width: 100%;
+    }
+    .logo {
+        margin-top: 50px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 475px) {
+    .uncommon {
+        font-size: 170%;
+        width: 100%;
+    }
+
+    .faq-title, .schedule-title, .sponsors-title {
+        font-size: 170%;
+        width: 100%;
+    }
+
+    .date {
+        font-size: 130%
+    }
+
+    .location {
+        font-size: 130%;
+    }
+
+    .register {
+        font-size: 110%;
+        padding: 14px 0 16px;
+        width: 170px;
+    }
+    .logo {
+        margin-top: 50px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 415px) {
+    .uncommon {
+        font-size: 150%;
+        width: 100%;
+    }
+
+    .faq-title, .schedule-title, .sponsors-title {
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 818px) {
+    .question, .answer {
+        width: 74%;
+    }
+    .pac-food-1 {
+        opacity: 0;
+    }
+    .pac-up, .pac-down, .pac-person, .pac-food-1, .pac-food-2, .pac-food-3, .pac-food-4 {
+        -webkit-animation: none;
+        animation: none;
+    }
+    .pac-up {
+        transform: rotate(-25deg);
+    }
+    .pac-down {
+        transform: rotate(25deg);
+    }
+    .right_paddle, .left_paddle {
+        width: 20px;
+        top: calc(50% - 60px);
+    }
+    .ball {
+        top: calc(50% - 14px);
+        left: 20px;
+        height: 28px;
+        width: 28px;
+    }
+    .ball, .right_paddle, .left_paddle {
+        -webkit-animation: none;
+        animation: none;
+    }
+    .canon, .bullet {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+}
+
+@media (max-width: 618px) {
+    .question, .answer {
+        width: 80%;
+    }
+
+    .faq-title {
+        padding-bottom: 50px;
+    }
+
+    .pacman-info {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 522px) {
+    .faq-title {
+        padding-bottom: 40px;
+    }
+    
+    .pacman-info {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .question, .answer {
+        width: 85%;
+    }
+
+    .question {
+        font-size: 27px;
+    }
+    
+    .answer {
+        font-size: 17px;
+    }
+
+    .pac-person {
+        top: 70px;
+        left: 30px;
+    }
+
+    .pac-food-2 {
+        top: 90px;
+        right: 40px;
+    }
+
+    .pac-food-3 {
+        top: calc(100% - 50px);
+    }
+    .pac-food-4 {
+        top: calc(100% - 50px);
+    }
+}
+
+@media (max-width: 466px) {
+    .pac-up, .pac-down {
+        width: 40px;
+        height: 20px;
+    }
+    .pac-food-2 {
+        top: 80px;
+        right: 35px;
+    }
+    .question {
+        font-size: 21px;
+    }
+    .answer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .time, .time-info {
+        width: 90%;
+    }
+
+    .type {
+        width: 90%;
+    }
+
+    .time-info {
+        padding-bottom: 5px;
+    }
+
+    .special {
+        padding-bottom: 30px;
+    }
+
+    .fire {
+        padding-bottom: 0px;
+        margin-bottom: -5px;
+    }
+}
+
+@media(max-width: 600px) {
+    .schedule-title {
+        padding-bottom: 50px;
+    }
+
+    .snake-info {
+        margin-top: 55px;
+    }
+
+    .time {
+        font-size: 18px;
+    }
+
+    .type {
+        font-size: 16px;
+    }
+
+    .time-info {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 430px) {
+    .time-info {
+        padding-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .time {
+        font-size: 16px;
+    }
+
+    .type {
+        font-size: 14px;
+    }
+
+    .special {
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 1060px) {
+    .sponsor {
+        height: 60px;
+        margin: 20px 20px 0;
+    }
+    .sponsors-title {
+        padding-bottom: 60px;
+    }
+    .invaders-info {
+        padding-top: 60px;
+    }
+}
+
+@media(max-width: 890px) {
+    .sponsor {
+        height: 50px;
+        margin: 20px 20px 0;
+    }
+}
+
+@media(max-width: 670px) {
+    .sponsor {
+        height: 45px;
+        box-shadow: -5px -5px 0px 1px #00ff00;
+    }
+}
+
+@media(max-width: 580px) {
+    .sponsor {
+        height: 30px;
+        margin: 20px 10px 0;
+    }
+}
+
+@media(max-width: 475px) {
+    .sponsors-title {
+        padding-top: 10px;
+        padding-bottom: 50px; 
+    }
+    .invaders-info {
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 450px) {
+    .sponsor {
+        height: 27px;
+        margin: 15px 10px 0;
+    }
 }
