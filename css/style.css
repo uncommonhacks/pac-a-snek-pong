@@ -359,7 +359,7 @@ html, body {
     padding-bottom: 10px;
     width: 67%;
     margin: 0 auto;
-    border-bottom: dashed 1px white;
+    border-bottom: solid 1px white;
     color: yellow;
 }
 
@@ -858,7 +858,7 @@ input:focus {outline:0;}
     .uncommon {
         font-size: 240%;
         width: 500px;
-        padding-top: 27px;
+        padding-top: 25px;
     }
     .faq-title, .schedule-title, .sponsors-title {
         font-size: 240%;
@@ -879,8 +879,14 @@ input:focus {outline:0;}
         width: 100%;
     }
     .logo {
-        margin-top: 50px;
+        margin-top: 30px;
         height: 90px;
+    }
+    .date {
+        margin-top: 30px;
+    }
+    .register {
+        margin-top: 30px;
     }
 }
 
@@ -976,7 +982,11 @@ input:focus {outline:0;}
     }
 
     .answer {
-        font-weight: 300;
+        font-weight: 400;
+    }
+
+    .time, .time-info {
+        font-weight: 400;
     }
 
     .faq-title {
@@ -1044,7 +1054,7 @@ input:focus {outline:0;}
         font-size: 21px;
     }
     .answer {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
@@ -1089,7 +1099,7 @@ input:focus {outline:0;}
     }
 
     .time-info {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
@@ -1100,11 +1110,11 @@ input:focus {outline:0;}
     }
 
     .time {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .type {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .special {
