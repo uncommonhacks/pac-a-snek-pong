@@ -759,7 +759,8 @@ input:focus {outline:0;}
 }
 
 .sponsor {
-    height: 70px;
+    max-height: 70px;
+    max-width: 300px;
     background:white;
     padding: 20px;
     margin-left: 30px;
@@ -769,6 +770,14 @@ input:focus {outline:0;}
     opacity: 1;
     position: relative;
     z-index: 10;
+}
+
+.sponsor-svg {
+    height: 60px;
+}
+
+#sponsor-jpm {
+    max-width: 500px;
 }
 
 
