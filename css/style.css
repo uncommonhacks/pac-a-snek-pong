@@ -982,7 +982,11 @@ input:focus {outline:0;}
     }
 
     .answer {
-        font-weight: 300;
+        font-weight: 400;
+    }
+
+    .time, .time-info {
+        font-weight: 400;
     }
 
     .faq-title {
