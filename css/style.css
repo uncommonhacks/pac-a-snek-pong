@@ -1168,7 +1168,7 @@ input:focus {outline:0;}
 @media(max-width: 475px) {
     .sponsors-title {
         padding-top: 10px;
-        padding-bottom: 50px; 
+        padding-bottom: 35px; 
     }
     .invaders-info {
         padding-bottom: 80px;
