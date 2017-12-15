@@ -188,8 +188,8 @@ html, body {
     left: 50px;
     display: inline-block;
 
-    -webkit-animation: move-pac 10s linear infinite;
-    animation: move-pac 10s linear infinite;
+    -webkit-animation: move-pac 17s linear infinite;
+    animation: move-pac 17s linear infinite;
 }
 
 .pacfood {
@@ -204,16 +204,16 @@ html, body {
     top: 70px;
     left: 70px;
 
-    -webkit-animation: food-dis-1 10s linear infinite;
-    animation: food-dis-1 10s linear infinite;
+    -webkit-animation: food-dis-1 17s linear infinite;
+    animation: food-dis-1 17s linear infinite;
 }
 
 .pac-food-2 {
     top: 70px;
     right: 70px;
 
-    -webkit-animation: food-dis-2 10s linear infinite;
-    animation: food-dis-2 10s linear infinite;
+    -webkit-animation: food-dis-2 17s linear infinite;
+    animation: food-dis-2 17s linear infinite;
 }
 
 .pac-food-3 {
@@ -221,8 +221,8 @@ html, body {
     top: calc(100% - 80px);
     right: 70px;
 
-    -webkit-animation: food-dis-3 10s linear infinite;
-    animation: food-dis-3 10s linear infinite;
+    -webkit-animation: food-dis-3 17s linear infinite;
+    animation: food-dis-3 17s linear infinite;
 }
 
 .pac-food-4 {
@@ -230,8 +230,8 @@ html, body {
     top: calc(100% - 80px);
     left: 70px;
 
-    -webkit-animation: food-dis-4 10s linear infinite;
-    animation: food-dis-4 10s linear infinite;
+    -webkit-animation: food-dis-4 17s linear infinite;
+    animation: food-dis-4 17s linear infinite;
 }
 
 @-webkit-keyframes food-dis-1 {
@@ -375,43 +375,43 @@ html, body {
 }
 
 #s1 {
-    -webkit-animation: move1 10s linear infinite;
-    animation: move1 10s linear infinite;
+    -webkit-animation: move1 17s linear infinite;
+    animation: move1 17s linear infinite;
 }
 
 #s2 {
-    -webkit-animation: move2 10s linear infinite;
-    animation: move2 10s linear infinite;
+    -webkit-animation: move2 17s linear infinite;
+    animation: move2 17s linear infinite;
 }
 
 #s3 {
-    -webkit-animation: move3 10s linear infinite;
-    animation: move3 10s linear infinite;
+    -webkit-animation: move3 17s linear infinite;
+    animation: move3 17s linear infinite;
 }
 
 #s4 {
-    -webkit-animation: move4 10s linear infinite;
-    animation: move4 10s linear infinite;
+    -webkit-animation: move4 17s linear infinite;
+    animation: move4 17s linear infinite;
 }
 
 #s5 {
-    -webkit-animation: move5 10s linear infinite;
-    animation: move5 10s linear infinite;
+    -webkit-animation: move5 17s linear infinite;
+    animation: move5 17s linear infinite;
 }
 
 #s6 {
-    -webkit-animation: move6 10s linear infinite;
-    animation: move6 10s linear infinite;
+    -webkit-animation: move6 17s linear infinite;
+    animation: move6 17s linear infinite;
 }
 
 #s7 {
-    -webkit-animation: move7 10s linear infinite;
-    animation: move7 10s linear infinite;
+    -webkit-animation: move7 17s linear infinite;
+    animation: move7 17s linear infinite;
 }
 
 #s8 {
-    -webkit-animation: move8 10s linear infinite;
-    animation: move8 10s linear infinite;
+    -webkit-animation: move8 17s linear infinite;
+    animation: move8 17s linear infinite;
 }
 
 @-webkit-keyframes move1 {
@@ -582,8 +582,8 @@ input:focus {outline:0;}
     margin-top: -webkit-calc(100vh - 120px);
     margin-top: calc(100vh - 120px);
 
-    -webkit-animation: invader-move 10s linear infinite;
-    animation: invader-move 10s linear infinite;
+    -webkit-animation: invader-move 17s linear infinite;
+    animation: invader-move 17s linear infinite;
 
     position: relative;
 }
@@ -626,10 +626,11 @@ input:focus {outline:0;}
     left: 65%;
     opacity: 0;
 
-    -webkit-animation: invader-shoot 10s linear infinite;
-    animation: invader-shoot 10s linear infinite;
+    -webkit-animation: invader-shoot 17s linear infinite;
+    animation: invader-shoot 17s linear infinite;
 
     position: absolute;
+    z-index: 1;
 }
 
 @-webkit-keyframes invader-move {
@@ -742,4 +743,6 @@ input:focus {outline:0;}
     margin-top: 30px;
     box-shadow: -10px -10px 0px 1px #00ff00;
     opacity: 0.9;
+    position: relative;
+    z-index: 10;
 }
