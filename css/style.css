@@ -858,7 +858,7 @@ input:focus {outline:0;}
     .uncommon {
         font-size: 240%;
         width: 500px;
-        padding-top: 40px;
+        padding-top: 27px;
     }
     .faq-title, .schedule-title, .sponsors-title {
         font-size: 240%;
@@ -896,11 +896,13 @@ input:focus {outline:0;}
     }
 
     .date {
-        font-size: 130%
+        font-size: 130%;
+        font-weight: 300;
     }
 
     .location {
         font-size: 130%;
+        font-weight: 300;
     }
 
     .register {
@@ -971,6 +973,10 @@ input:focus {outline:0;}
 @media (max-width: 618px) {
     .question, .answer {
         width: 80%;
+    }
+
+    .answer {
+        font-weight: 300;
     }
 
     .faq-title {
