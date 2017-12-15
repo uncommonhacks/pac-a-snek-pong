@@ -1023,9 +1023,11 @@ input:focus {outline:0;}
 
     .pac-food-3 {
         top: calc(100% - 50px);
+        right: 40px;
     }
     .pac-food-4 {
         top: calc(100% - 50px);
+        left: 40px;
     }
 }
 
